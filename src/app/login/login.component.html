@@ -1,0 +1,22 @@
+<section fxFlexFill fxLayoutAlign="center center">
+    <div [formGroup]="loginForm" fxFlex  class="tamanho">
+
+        <p-card>
+            <div fxLayoutAlign="center center">
+
+                <div fxLayout="row">
+                    <p>Usuário</p>
+                    <input formControlName="nome" class="login" type="text" pInputText />
+                </div>
+                <div fxLayout="row">
+
+                    <p>Senha</p>
+                    <input formControlName="senha" type="password" pPassword />
+                </div>
+                <button [disabled]="loginForm.invalid" (click)="submit()" class="entrar"
+                    pButton type="button" label="Entrar"></button>
+            </div>
+        </p-card>
+
+    </div>
+</section>
