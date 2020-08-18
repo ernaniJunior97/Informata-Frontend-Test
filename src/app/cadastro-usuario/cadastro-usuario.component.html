@@ -1,0 +1,44 @@
+<section>
+    <div [formGroup]="cadastroForm">
+
+        <p-card>
+            <p>Cadastro</p>
+            <div class="p-fluid p-formgrid p-grid">
+                <div class="p-field p-col-12 p-md-6">
+                    <label>login</label>
+                    <input formControlName="nome" type="text" pInputText>
+                </div>
+
+                <div class="p-field p-col-12 p-md-6">
+                    <label>Cpf</label>
+                    <input formControlName="cpf" type="text" rows="4" pInputText>
+                </div>
+                <div class="p-field p-col-12 p-md-6">
+                    <label>Contato</label>
+                    <input formControlName="contato" type="text" pInputText>
+                </div>
+                <div class="p-field p-col-5 p-md-6">
+                    <label>Senha</label>
+                    <input formControlName="senha" type="password" pInputText>
+                </div>
+                <div class="p-field p-col-12 p-md-6">
+                    <label>data de nascimento</label>
+                    <input formControlName="dataNasc" type="date" pInputText>
+                </div>
+
+
+            </div>
+        </p-card>
+        <div class="acoes p-d-flex p-jc-end">
+
+            <div>
+                <button (click)="voltar()" class="p-button-secondary" pButton type="button" label="voltar"></button>
+            </div>
+            <div>
+                <button (click)="criar()" [disabled]="cadastroForm.invalid" class="entrar" pButton type="button"
+                    label="Salvar"></button>
+            </div>
+        </div>
+
+    </div>
+</section>

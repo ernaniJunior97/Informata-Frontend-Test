@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router, ActivatedRoute } from '@angular/router';
+import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { LoginService } from '../login/login.service';
+import { LoginService } from './login.service';
 
 @Injectable()
-export class ListaProdutosGuard implements CanActivate {
+export class UsuarioLogadoGuard implements CanActivate {
 
     constructor(
         private loginService: LoginService,
@@ -20,7 +20,7 @@ export class ListaProdutosGuard implements CanActivate {
             return true;
         }
 
-        this.router.navigate(['login'], { relativeTo: this.route });
+        this.router.navigate(['../login'], { relativeTo: this.route });
 
         return false;
     }

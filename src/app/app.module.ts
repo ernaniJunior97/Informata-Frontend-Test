@@ -7,9 +7,9 @@ import { CardModule } from 'primeng/card';
 import { PasswordModule } from 'primeng/password';
 import { ButtonModule } from 'primeng/button';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { ListaProdutosComponent } from './lista-produtos/lista-produtos.component';
 import { TableModule } from 'primeng/table';
 import { CommonModule } from '@angular/common';
+import { LoginModule } from './login/login.module';
 
 
 @NgModule({
@@ -26,7 +26,8 @@ import { CommonModule } from '@angular/common';
     ButtonModule,
     FormsModule,
     ReactiveFormsModule,
-    TableModule
+    TableModule,
+    LoginModule
 
   ],
   providers: [],

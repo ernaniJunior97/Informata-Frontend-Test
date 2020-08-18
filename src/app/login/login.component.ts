@@ -54,6 +54,10 @@ export class LoginComponent implements OnInit {
       });
 
   }
+
+  cadastrar(): void {
+    this.router.navigate(['../cadastro-usuario'], { relativeTo: this.route });
+  }
 }
 
 

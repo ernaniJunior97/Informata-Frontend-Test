@@ -1,5 +1,17 @@
-<p-table [value]="produtos">
+<div  class="acoes p-d-flex p-jc-between"  fxLayout="row" [formGroup]="queryField">
+    <input class="text-input" formControlName="filtro" type="text" placeholder="Pesquise o produto..." pInputText />
+    <button (click)="buscarProduto()" pButton type="button" label="Pesquisar"></button>
+    <div>
+        <button class="p-button-danger" (click)="logout()" pButton type="button" label="Sair"></button>
+    </div>
+</div>
+
+
+<p-table [value]="produtosFiltrados">
     <ng-template pTemplate="header">
+        <div>
+
+        </div>
         <tr>
             <th>Code</th>
             <th>Name</th>
@@ -8,13 +20,13 @@
             <th>Nome Comercial</th>
         </tr>
     </ng-template>
-        <ng-template pTemplate="body">
-            <tr *ngFor="let produto of produtos">
-                <td>{{produto.id}}</td>
-                <td>{{produto.nomeComercial}}</td>
-                <td>{{produto.codigoErp}}</td>
-                <td>{{produto.apresentacao}}</td>
-                <td>{{produto.nomeComercialComApresentacao}}</td>
-            </tr>
-        </ng-template>
+    <ng-template pTemplate="body">
+        <tr *ngFor="let produto of produtosFiltrados">
+            <td>{{produto.id}}</td>
+            <td>{{produto.nomeComercial}}</td>
+            <td>{{produto.codigoErp}}</td>
+            <td>{{produto.apresentacao}}</td>
+            <td>{{produto.nomeComercialComApresentacao}}</td>
+        </tr>
+    </ng-template>
 </p-table>

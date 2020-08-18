@@ -1,0 +1,9 @@
+
+
+.acoes {
+    padding: 16px;
+  }
+  
+  .acoes button:first-child {
+    margin-right: 16px;
+  }

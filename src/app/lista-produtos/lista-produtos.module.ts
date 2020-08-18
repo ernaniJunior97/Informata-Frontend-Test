@@ -8,10 +8,8 @@ import { ListaProdutosComponent } from './lista-produtos.component';
 import { ListaProdutosRoutingModule } from './lista-produtos.routing';
 import { TableModule } from 'primeng/table';
 import {PaginatorModule} from 'primeng/paginator';
-import { ListaProdutosGuard } from './lista-produtos.guard';
-import { ListaProdutosService } from './lista-produtos.service';
-import { LoginModule } from '../login/login.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ListaProdutosService } from './lista-produtos.service';
 
 
 
@@ -31,10 +29,9 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     TableModule,
     PaginatorModule,
-    LoginModule,
     HttpClientModule
 
   ],
-  providers: [ListaProdutosGuard, ListaProdutosService]
+  providers: [ListaProdutosService]
 })
 export class ListaProdutosModule { }
